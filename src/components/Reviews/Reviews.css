@@ -1,0 +1,11 @@
+.btn-show-more {
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    color: blueviolet;
+}
+.btn-show-more:hover {
+    background-color: blueviolet;
+    color: #ffff;
+    transition: .5s;
+}
