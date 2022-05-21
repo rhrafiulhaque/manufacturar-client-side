@@ -11,7 +11,7 @@ function App() {
     <div className="max-w-7xl mx-auto px-12">
       <Navbar></Navbar>
       <Routes>
-        <Route></Route>
+        <Route path='/' element={<Home></Home>}></Route>
       </Routes>
       <Home></Home>
       <Footer></Footer>
