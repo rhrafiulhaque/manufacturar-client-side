@@ -5,8 +5,8 @@ const Review = ({ review }) => {
     const { name, img, message, ratings } = review;
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
-            <div class="avatar">
-                <div class="w-24 rounded-full mx-auto mt-3">
+            <div className="avatar">
+                <div className="w-24 rounded-full mx-auto mt-3">
                     <img src={img} />
                 </div>
             </div>

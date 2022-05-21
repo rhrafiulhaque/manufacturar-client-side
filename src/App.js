@@ -4,11 +4,15 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
+import { Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="max-w-7xl mx-auto px-12">
       <Navbar></Navbar>
+      <Routes>
+        
+      </Routes>
       <Home></Home>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

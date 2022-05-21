@@ -16,7 +16,7 @@ const Product = ({ product }) => {
                 <p><Readmore message={description}></Readmore></p>
                 <p>Available Order: {avilable_quantity}</p>
                 <p>Minimum Order Quantity: {minimum_order_quantity}</p>
-                <button class="btn btn-secondary">Buy Now</button>
+                <button className="btn btn-secondary">Buy Now</button>
             </div> 
         </div>
     );
