@@ -1,0 +1,43 @@
+[{
+  "id": "110",
+  "name":"Sabbir",
+  "message": "Simple, easy to use Computer Dictionary for PC terms. My favorite part of it is the ease of the app. When you start searching, it starts pulling up a list of what is close to what you are trying to spell. Great explanations as well.",
+  "ratings": 4.5,
+  "img":"https://i.ibb.co/XF9k64N/8.jpg"
+},
+{
+    "id": "111",
+    "name":"Sumaya",
+    "message": "Beautiful laptop. I upgraded from the MacBook Air of old...so far this laptop has blown it away. It wasnot overly pricey to be honest and I feel it is worth the price. Overall look is great and keyboard feel is nice. Larger touchpad is great, Ive paired my Magic Trackpad 2 with it as well.",
+    "ratings": 5,
+    "img":"https://i.ibb.co/XF9k64N/8.jpg"
+},
+{
+    "id": "112",
+    "name":"Rakib",
+    "message": "I have two MacBook Airs (MBA), a 13 and a 11, both with the previous form factor (the wide, body colored bezel around the screen, 1280x800 resolution) and this new 13 MBA improves upon it in every way (almost) and makes it nearly perfect.",
+    "ratings": 4,
+    "img":"https://i.ibb.co/XF9k64N/8.jpg"
+},
+{
+    "id": "113",
+    "name":"Aahad",
+    "message": "No complains so far. Very fast and performs great. I had a 2014 MacBook Air and finally upgraded this year. This is leagues beyond that entry and I’m very happy with this upgrade.",
+    "ratings": 5,
+    "img":"https://i.ibb.co/XF9k64N/8.jpg"
+},
+{
+    "id": "114",
+    "name":"Rahat",
+    "message": "When I started reading up and watching vids on the new M1 I was sold. I am all in now. This Air is an absolute unit of a machine. I really see no reason for anyone to get the Pro, unless you are getting the soon to be released updated 16” pro. This bad boy will do all that most people need.",
+    "ratings": 4,
+    "img":"https://i.ibb.co/XF9k64N/8.jpg"
+},
+{
+    "id": "115",
+    "name":"Sanjida",
+    "message": "The battery life is excellent, this laptop feels premium, I have no doubt that this will last me well into the future and it has completely changed my mind about Apple.",
+    "ratings": 5,
+    "img":"https://i.ibb.co/XF9k64N/8.jpg"
+}
+]

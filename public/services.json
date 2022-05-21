@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "name": "Xiaomi Watch",
+        "price": "1300",
+        "description": "Programmable Smart Watch is a small fully programmable wrist accessory that Integrates both smart key & smart watch functions. Offline dealers or locksmiths can provide technical support, Supports PLC AP1 SW200, and comes with tons of apps for multiple functionality.",
+        "img": "https://i.ibb.co/Bj0HvJH/5.jpg",
+        "avilable_quantity": "100",
+        "minimum_order_quantity": "10"
+        
+    },
+    {
+        "id": 2,
+        "name": "Huawei",
+        "price": "1980",
+        "description": "Noise ColorFit Ultra Buzz smartwatch has been launched in India. It is equipped with a heart-rate tracker and features 100 sports modes. The wearable is offered in three different shades and will go on sale in the country starting April 28.",
+        "img": "https://i.ibb.co/XF9k64N/8.jpg",
+        "avilable_quantity": "100",
+        "minimum_order_quantity": "10"
+    },
+    {
+        "id": 3,
+        "name": "Culrd Watch",
+        "price": "300",
+        "description": "Programmable Smart Watch is a small fully programmable wrist accessory that Integrates both smart key & smart watch functions. Offline dealers or locksmiths can provide technical support, Supports PLC AP1 SW200, and comes with tons of apps for multiple functionality.",
+        "img": "https://i.ibb.co/Bj0HvJH/5.jpg",
+        "avilable_quantity": "100",
+        "minimum_order_quantity": "10"
+    },
+    {
+        "id": 4,
+        "name": "Neuro Watch",
+        "price": "900",
+        "description": "Programmable Smart Watch is a small fully programmable wrist accessory that Integrates both smart key & smart watch functions. Offline dealers or locksmiths can provide technical support, Supports PLC AP1 SW200, and comes with tons of apps for multiple functionality.",
+        "img": "https://i.ibb.co/XF9k64N/8.jpg",
+        "avilable_quantity": "100",
+        "minimum_order_quantity": "10"
+    },
+    {
+        "id": 5,
+        "name": "Redmi Watch",
+        "price": "440",
+        "description": "Programmable Smart Watch is a small fully programmable wrist accessory that Integrates both smart key & smart watch functions. Offline dealers or locksmiths can provide technical support, Supports PLC AP1 SW200, and comes with tons of apps for multiple functionality.",
+        "img": "https://i.ibb.co/Bj0HvJH/5.jpg",
+        "avilable_quantity": "100",
+        "minimum_order_quantity": "10"
+    },
+    {
+        "id": 6,
+        "name": "Neuro Watch",
+        "price": "900",
+        "description": "Programmable Smart Watch is a small fully programmable wrist accessory that Integrates both smart key & smart watch functions. Offline dealers or locksmiths can provide technical support, Supports PLC AP1 SW200, and comes with tons of apps for multiple functionality.",
+        "img": "https://i.ibb.co/XF9k64N/8.jpg",
+        "avilable_quantity": "100",
+        "minimum_order_quantity": "10"
+    },
+    {
+        "id": 7,
+        "name": "Redmi Watch",
+        "price": "440",
+        "description": "Programmable Smart Watch is a small fully programmable wrist accessory that Integrates both smart key & smart watch functions. Offline dealers or locksmiths can provide technical support, Supports PLC AP1 SW200, and comes with tons of apps for multiple functionality.",
+        "img": "https://i.ibb.co/Bj0HvJH/5.jpg",
+        "avilable_quantity": "100", 
+        "minimum_order_quantity": "10"
+    },
+    {
+        "id": 8,
+        "name": "Uiww Watch",
+        "price": "767",
+        "description": "Programmable Smart Watch is a small fully programmable wrist accessory that Integrates both smart key & smart watch functions. Offline dealers or locksmiths can provide technical support, Supports PLC AP1 SW200, and comes with tons of apps for multiple functionality.",
+        "img": "https://i.ibb.co/XF9k64N/8.jpg",
+        "avilable_quantity": "100",
+        "minimum_order_quantity": "10"
+    }
+    
+]
