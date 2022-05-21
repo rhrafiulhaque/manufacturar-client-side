@@ -5,6 +5,8 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
 import { Route, Routes } from 'react-router-dom';
+import Blog from './components/Blog/Blog';
+import MyProfile from './components/MyProfile/MyProfile';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/myprofile' element={<MyProfile></MyProfile>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

@@ -22,7 +22,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">TukiTaki</a>
+                <Link className=" normal-case text-xl" to="/">TukiTaki</Link>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
