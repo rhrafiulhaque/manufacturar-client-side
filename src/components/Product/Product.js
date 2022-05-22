@@ -1,10 +1,15 @@
 import React from 'react';
 import './Product.css';
 import Readmore from '../Readmore/Readmore';
+import { useNavigate } from 'react-router-dom';
 
 
 const Product = ({ product }) => {
-    const { id, name, quantity, img, price, description,avilable_quantity,minimum_order_quantity } = product;
+    const { _id, name, quantity, img, price, description,avilable_quantity,minimum_order_quantity } = product;
+    const navigate = useNavigate();
+    const buyProduct=id=>{
+        navigate(`/purchase/${id}`);
+    }
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
@@ -16,7 +21,7 @@ const Product = ({ product }) => {
                 <p><Readmore message={description}></Readmore></p>
                 <p>Available Order: {avilable_quantity}</p>
                 <p>Minimum Order Quantity: {minimum_order_quantity}</p>
-                <button className="btn btn-secondary">Buy Now</button>
+                <button className="btn btn-secondary" onClick={()=>buyProduct(_id)}>Buy Now</button>
             </div> 
         </div>
     );
