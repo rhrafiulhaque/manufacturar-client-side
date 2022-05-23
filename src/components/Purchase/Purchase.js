@@ -30,7 +30,7 @@ const Purchase = () => {
         const address = event.target.address.value;
         const avilableqty = singleProduct.avilable_quantity;
         if (minqty <= quantity && quantity <= avilableqty) {
-            console.log(id, productname, price, quantity, username, email, minqty, phone, address);
+            event.target.reset();
             const order ={
                 productId:id,
                 productname:productname,
@@ -51,7 +51,7 @@ const Purchase = () => {
             .then(res=>res.json())
             .then(data=>{
                 if(data.success){
-                    toast.success(`Your Order is Waiting For Shipping`);
+                    toast.success(`Your Order is submitted and Waiting for your Payment`);
                 }else{
                     toast.error('There Have an error');
                 }

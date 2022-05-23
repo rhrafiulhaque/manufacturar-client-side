@@ -17,9 +17,9 @@ const Product = ({ product }) => {
             </figure>
             <div className="card-body items-center text-center product">
                 <h2 className="card-title">{name}</h2>
-                <h3 className=' font-semibold'>${price}</h3>
+                <h3 className=' font-semibold'>${price} <span class="badge badge-md">Per Piece</span></h3>
                 <p><Readmore message={description}></Readmore></p>
-                <p>Available Order: {avilable_quantity}</p>
+                <p>Available Product Qunatity: {avilable_quantity}</p>
                 <p>Minimum Order Quantity: {minimum_order_quantity}</p>
                 <button className="btn btn-secondary" onClick={()=>buyProduct(_id)}>Buy Now</button>
             </div> 
