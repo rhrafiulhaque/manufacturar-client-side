@@ -1,6 +1,7 @@
 import { async } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
 import { useAuthState, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
@@ -12,17 +13,12 @@ const MyProfile = () => {
     const [updateProfile, updating] = useUpdateProfile(auth);
 
     // User From DB Mongo 
-    const [dbUser, setDBuser] = useState('');
-    useEffect(() => {
-            fetch(`http://localhost:5000/user/${user?.email}`)
-                .then(res => res.json())
-                .then(data => setDBuser(data));
-
-    }, [user?.email]);
+    const {data:dbUser,isLoading,refetch} = useQuery('users',()=>fetch(`http://localhost:5000/user/${user?.email}`).then(res=>res.json()))
+    refetch();
 
 
 
-    if (updating) {
+    if (updating||isLoading) {
         return <Loading></Loading>
     }
 
@@ -39,7 +35,10 @@ const MyProfile = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log('data inside useToken', data);
+                    refetch();
                 })
+
+               
         }
     }
     const handleUpdate = async event => {
@@ -59,10 +58,11 @@ const MyProfile = () => {
         await updateProfile({ displayName: username });
         await updateDBProfile(currentUser);
         toast.success('Profile Updated');
+        refetch();
     }
     return (
         <div>
-            <h2 className='text-2xl font-bold text-green-500 text-center my-4'>My Profile</h2>
+            <h2 className='text-2xl font-bold text-green-500 text-center my-4'>My Profile {dbUser.length}</h2>
             <div class="w-full mx-auto max-w-lg">
                 <form onSubmit={handleUpdate} class="bg-white shadow-md rounded px-5 pt-6 pb-8 mb-4" >
                     <div class="mb-4">
