@@ -17,8 +17,17 @@ import AddReview from './components/Dashboard/AddReview';
 import Products from './components/Products/Products';
 import MyProfile from './components/Dashboard/MyProfile';
 import Users from './components/Users/Users';
+import RequireAdmin from './components/RequireAdmin/RequireAdmin';
+import AddProduct from './components/AddProduct/AddProduct';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from './firebase.init';
+import useAdmin from './components/Hooks/useAdmin';
+import WelcomAdmin from './components/WelcomAdmin/WelcomAdmin';
+import ManageProducts from './components/ManageProducts/ManageProducts';
 
 function App() {
+  const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
   return (
     <div className="max-w-7xl mx-auto px-12">
       <Navbar></Navbar>
@@ -31,10 +40,13 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/purchase/:id' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
-          <Route index element={<MyOrders></MyOrders>}></Route>
+          {!admin&&<Route index element={<MyOrders></MyOrders>}></Route>}
+          {admin&&<Route index element={<WelcomAdmin></WelcomAdmin>}></Route>}
           <Route path='/dashboard/addreview' element={<AddReview></AddReview>}></Route>
           <Route path='/dashboard/myprofile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='/dashboard/users' element={<Users></Users>}></Route>
+          <Route path='/dashboard/users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='/dashboard/addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='/dashboard/manageproducts' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>

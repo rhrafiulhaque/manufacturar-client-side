@@ -2,10 +2,15 @@ import React from 'react';
 import './Product.css';
 import Readmore from '../Readmore/Readmore';
 import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import useAdmin from '../Hooks/useAdmin';
+import auth from '../../firebase.init';
 
 
 const Product = ({ product }) => {
     const { _id, name, quantity, img, price, description,avilable_quantity,minimum_order_quantity } = product;
+    const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     const navigate = useNavigate();
     const buyProduct=id=>{
         navigate(`/purchase/${id}`);
@@ -21,7 +26,7 @@ const Product = ({ product }) => {
                 <p><Readmore message={description}></Readmore></p>
                 <p>Available Product Qunatity: {avilable_quantity}</p>
                 <p>Minimum Order Quantity: {minimum_order_quantity}</p>
-                <button className="btn btn-secondary" onClick={()=>buyProduct(_id)}>Buy Now</button>
+                {!admin&& <button className="btn btn-secondary" onClick={()=>buyProduct(_id)}>Buy Now</button>}
             </div> 
         </div>
     );

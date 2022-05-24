@@ -62,7 +62,7 @@ const MyProfile = () => {
     }
     return (
         <div>
-            <h2 className='text-2xl font-bold text-green-500 text-center my-4'>My Profile {dbUser.length}</h2>
+            <h2 className='text-2xl font-bold text-green-500 text-center my-4'>My Profile</h2>
             <div class="w-full mx-auto max-w-lg">
                 <form onSubmit={handleUpdate} class="bg-white shadow-md rounded px-5 pt-6 pb-8 mb-4" >
                     <div class="mb-4">
