@@ -24,12 +24,15 @@ import auth from './firebase.init';
 import useAdmin from './components/Hooks/useAdmin';
 import WelcomAdmin from './components/WelcomAdmin/WelcomAdmin';
 import ManageProducts from './components/ManageProducts/ManageProducts';
+import ManageOrder from './components/ManageOrder/ManageOrder';
+import Payment from './components/Dashboard/Payment';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
   return (
-    <div className="max-w-7xl mx-auto px-12">
+    <div class="max-w-7xl mx-auto px-12">
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -44,10 +47,13 @@ function App() {
           {admin&&<Route index element={<WelcomAdmin></WelcomAdmin>}></Route>}
           <Route path='/dashboard/addreview' element={<AddReview></AddReview>}></Route>
           <Route path='/dashboard/myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='/dashboard/payment/:id' element={<Payment></Payment>}></Route>
           <Route path='/dashboard/users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='/dashboard/addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='/dashboard/manageproducts' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
+          <Route path='/dashboard/manageorder' element={<RequireAdmin><ManageOrder></ManageOrder></RequireAdmin>}></Route>
         </Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

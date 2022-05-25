@@ -16,17 +16,17 @@ const Product = ({ product }) => {
         navigate(`/purchase/${id}`);
     }
     return (
-        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
-                <img src={img} alt="Shoes" className="rounded-xl" />
+        <div class="card lg:max-w-lg bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+                <img src={img} alt="Shoes" class="rounded-xl" />
             </figure>
-            <div className="card-body items-center text-center product">
-                <h2 className="card-title">{name}</h2>
+            <div class="card-body items-center text-center product">
+                <h2 class="card-title">{name}</h2>
                 <h3 className=' font-semibold'>${price} <span class="badge badge-md">Per Piece</span></h3>
                 <p><Readmore message={description}></Readmore></p>
                 <p>Available Product Qunatity: {avilable_quantity}</p>
                 <p>Minimum Order Quantity: {minimum_order_quantity}</p>
-                {!admin&& <button className="btn btn-secondary" onClick={()=>buyProduct(_id)}>Buy Now</button>}
+                {!admin&& <button class="btn btn-secondary" onClick={()=>buyProduct(_id)}>Buy Now</button>}
             </div> 
         </div>
     );

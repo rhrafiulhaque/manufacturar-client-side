@@ -70,8 +70,8 @@ const Purchase = () => {
             <h3 className='text-primary  text-4xl text-center font-bold uppercase pb-7'>Purchase Product</h3>
 
             <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-                <div className="avatar">
-                    <div className="w-24 rounded-full mx-auto ">
+                <div class="avatar">
+                    <div class="w-24 rounded-full mx-auto ">
                         <img className='' src={singleProduct.img} />
                     </div>
                 </div>
@@ -132,7 +132,7 @@ const Purchase = () => {
                     </label>
                 </div>
                 <div class="form-control">
-                    <input type="submit" value="Submit" className="btn btn-secondary w-full max-w-xs" />
+                    <input type="submit" value="Submit" class="btn btn-secondary w-full max-w-xs" />
                 </div>
 
             </form>

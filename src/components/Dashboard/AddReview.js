@@ -47,11 +47,11 @@ const AddReview = () => {
         <div>
             <h2 className='text-2xl font-bold text-green-500 text-center my-4'>Welcome to Your review</h2>
             <form onSubmit={handleReview} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-                <input type="text" name="name" disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
-                <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
-                <textarea type="text" name="message" placeholder="Your Review" className="input  input-bordered w-full h-52 max-w-xs" />
-                <input type="number" name="ratings" placeholder="Ratings" className="input input-bordered w-full max-w-xs" />
-                <input type="submit" value="Submit" className="btn btn-secondary w-full max-w-xs" />
+                <input type="text" name="name" disabled value={user?.displayName || ''} class="input input-bordered w-full max-w-xs" />
+                <input type="email" name="email" disabled value={user?.email || ''} class="input input-bordered w-full max-w-xs" />
+                <textarea type="text" name="message" placeholder="Your Review" class="input  input-bordered w-full h-52 max-w-xs" />
+                <input type="number" name="ratings" placeholder="Ratings" class="input input-bordered w-full max-w-xs" />
+                <input type="submit" value="Submit" class="btn btn-secondary w-full max-w-xs" />
             </form>
         </div>
     );

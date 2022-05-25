@@ -11,7 +11,7 @@ const Readmore = ({message}) => {
         <div>
            <p>
            {isReadMore ? message : message.slice(0,100)}
-            <button onClick={toggleBtn} className="read-btn"> {isReadMore?'Read Less':'.. Read More'}</button>
+            <button onClick={toggleBtn} class="read-btn"> {isReadMore?'Read Less':'.. Read More'}</button>
            </p>
         </div>
     );
