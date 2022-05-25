@@ -9,7 +9,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L3K7gFnwSLm2DyZfkOAeZy9NtoCowWjHSyO7hKI1Xy8P9diOX2jkPsue8wuW4FO5t9WvaPHsbzSGlGHONm9HM5Y00hYbaU1DU');
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://dry-journey-86237.herokuapp.com/order/${id}`;
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET'
 

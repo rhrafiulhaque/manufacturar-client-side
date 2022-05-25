@@ -13,7 +13,7 @@ const MyProfile = () => {
     const [updateProfile, updating] = useUpdateProfile(auth);
 
     // User From DB Mongo 
-    const {data:dbUser,isLoading,refetch} = useQuery('users',()=>fetch(`http://localhost:5000/user/${user?.email}`).then(res=>res.json()))
+    const {data:dbUser,isLoading,refetch} = useQuery('users',()=>fetch(`https://dry-journey-86237.herokuapp.com/user/${user?.email}`).then(res=>res.json()))
     refetch();
 
 
@@ -25,7 +25,7 @@ const MyProfile = () => {
     // Update User Profile 
     const updateDBProfile = (currentUser) => {
         if (user.email) {
-            fetch(`http://localhost:5000/user/${user?.email}`, {
+            fetch(`https://dry-journey-86237.herokuapp.com/user/${user?.email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -5,7 +5,7 @@ import UsersData from './UsersData/UsersData';
 
 const Users = () => {
 
-    const { data: users, isLoading,refetch } = useQuery('users', () => fetch('http://localhost:5000/user',{
+    const { data: users, isLoading,refetch } = useQuery('users', () => fetch('https://dry-journey-86237.herokuapp.com/user',{
         method:'GET',
         headers:{
             'authorization':`Bearer ${localStorage.getItem('accessToken')}`

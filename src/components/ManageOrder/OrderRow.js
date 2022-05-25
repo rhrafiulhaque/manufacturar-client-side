@@ -5,7 +5,7 @@ const OrderRow = ({ order, index, setDeletingProduct }) => {
 
     const handleShip = ()=>{
         console.log('Shipped' ,order._id)
-        fetch(`http://localhost:5000/ordership/${order._id}`, {
+        fetch(`https://dry-journey-86237.herokuapp.com/ordership/${order._id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'

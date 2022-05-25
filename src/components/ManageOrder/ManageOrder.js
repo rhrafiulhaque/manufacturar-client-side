@@ -6,7 +6,7 @@ import OrderRow from './OrderRow';
 
 const ManageOrder = () => {
     const[deletingProduct,setDeletingProduct] = useState(null);
-    const { data: orders, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/allorders').then(res => res.json()));
+    const { data: orders, isLoading, refetch } = useQuery('products', () => fetch('https://dry-journey-86237.herokuapp.com/allorders').then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>
     }

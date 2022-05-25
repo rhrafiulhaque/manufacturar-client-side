@@ -40,7 +40,7 @@ const AddProduct = () => {
                 }
                 
                 // Product Data Goes to DB 
-                fetch('http://localhost:5000/product',{
+                fetch('https://dry-journey-86237.herokuapp.com/product',{
                     method:'POST',
                     headers:{
                         'content-type':'application/json',

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteConfirmo = ({deletingProduct,refetch,setDeletingProduct}) => {
     const{productname,_id} =deletingProduct;
     const handleDelete = () => {
-        fetch(`http://localhost:5000/allorder/${_id}`, {
+        fetch(`https://dry-journey-86237.herokuapp.com/allorder/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

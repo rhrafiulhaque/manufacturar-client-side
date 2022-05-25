@@ -13,7 +13,7 @@ const CheckoutForm = ({order}) => {
 
     const {_id,price,username,email,productname} = order;
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://dry-journey-86237.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -80,7 +80,7 @@ const CheckoutForm = ({order}) => {
                 price: price
                 
             }
-            fetch(`http://localhost:5000/order/${_id}`, {
+            fetch(`https://dry-journey-86237.herokuapp.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'
